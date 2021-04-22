@@ -1,4 +1,7 @@
 # wysi-bot
+
+<img src="media/wysiaireu.gif" alt="Project banner" width="200"/>
+
 when you see it
 
 reacts when he sees the funny numeral - the only command is .roll n, n being an integer
