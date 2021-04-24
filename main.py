@@ -1,4 +1,4 @@
-import discord, random
+import discord, random, re
 from discord.ext import commands
 from config import token
 from discord import File
@@ -21,13 +21,16 @@ async def on_message(message):
     if message.embeds:
         for embed in message.embeds:
             if type(embed.description) == str:
-                strEmb += embed.description
+                tmp = embed.description
+                re.sub(r'<:\w*:\d*>','', tmp)
+                strEmb += tmp
             for f in embed.fields:
-                strEmb += f.name
-                strEmb += f.value
-
-    print(strEmb)
-    
+                tmp = f.name
+                re.sub(r'<:\w*:\d*>','', tmp)
+                strEmb += tmp
+                tmp = f.value
+                re.sub(r'<:\w*:\d*>','', tmp)
+                strEmb += tmp
 
     msg = message.content.lower()
     if any(ext in msg for ext in wysiList) or any(ext in strEmb for ext in wysiList):
