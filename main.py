@@ -23,6 +23,8 @@ async def on_message(message):
             strEmb += embed.description
             strEmb += embed.footer
             for f in embed.fields:
+                print(f.name)
+                strEmb += f.name
                 strEmb += f.value
 
     msg = message.content.lower()
