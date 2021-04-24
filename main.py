@@ -22,7 +22,7 @@ async def on_message(message):
         for embed in message.embeds:
             strEmb += embed.description
             for f in embed.fields:
-                await message.channel.send(content=f.name)
+                await message.channel.send(content=strEmb)
                 strEmb += f.name
                 strEmb += f.value
 
