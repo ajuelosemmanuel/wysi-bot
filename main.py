@@ -22,9 +22,11 @@ async def on_message(message):
         for embed in message.embeds:
             strEmb += embed.description
             for f in embed.fields:
-                await message.channel.send(content=strEmb)
                 strEmb += f.name
                 strEmb += f.value
+
+    print(strEmb)
+    
 
     msg = message.content.lower()
     if any(ext in msg for ext in wysiList) or any(ext in strEmb for ext in wysiList):
