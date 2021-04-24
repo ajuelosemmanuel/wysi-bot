@@ -21,7 +21,6 @@ async def on_message(message):
     if message.embeds:
         for embed in message.embeds:
             strEmb += embed.description
-            strEmb += embed.footer
             for f in embed.fields:
                 print(f.name)
                 strEmb += f.name
