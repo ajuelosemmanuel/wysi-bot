@@ -16,8 +16,17 @@ async def on_ready():
 
 @client.event
 async def on_message(message):
+    wysiList = ["727", "7.27", "72.7", "7:27", "7/27", "7+27", "7*27", "7,27", "72,7", "7-27", "72+7", "72-7", "72*7"]
+    strEmb = ""
+    if message.embeds:
+        for embed in message.embeds:
+            strEmb += embed.description
+            for f in embed.fields:
+                strEmb += f.name
+                strEmb += f.value
+
     msg = message.content.lower()
-    if "727" in msg:
+    if any(ext in msg for ext in wysiList) or any(ext in strEmb for ext in wysiList):
         rng = random.randint(0, 1000)
         if rng == 727:
             await message.channel.send(content="WYSI", tts=False, embed=None, file=File('./media/bz.jpg'), files=None, delete_after=None, nonce=None, allowed_mentions=None, reference=None, mention_author=None)
@@ -31,6 +40,9 @@ async def on_message(message):
             await message.channel.send(content="WYSI", tts=False, embed=None, file=File('./media/dicarpacciowysi.jpg'), files=None, delete_after=None, nonce=None, allowed_mentions=None, reference=None, mention_author=None)
         else:
             await message.channel.send(content="WYSI", tts=False, embed=None, file=File('./media/wysiaireu.gif'), files=None, delete_after=None, nonce=None, allowed_mentions=None, reference=None, mention_author=None)
+    
+
+    
     await client.process_commands(message)
 
 
