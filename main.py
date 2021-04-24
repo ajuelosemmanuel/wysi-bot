@@ -21,18 +21,16 @@ async def on_message(message):
     if message.embeds:
         for embed in message.embeds:
             if type(embed.description) == str:
-                tmp = embed.description
-                tmp = re.sub(r'<:\w*:\d*>','', tmp)
-                strEmb += tmp
+                strEmb += embed.description
             for f in embed.fields:
-                tmp = f.name
-                tmp = re.sub(r'<:\w*:\d*>','', tmp)
-                strEmb += tmp
-                tmp = f.value
-                tmp = re.sub(r'<:\w*:\d*>','', tmp)
-                strEmb += tmp
+                strEmb += f.name
+                strEmb += f.value
+
+    strEmb = re.sub(r'<:\w*:\d*>','', strEmb)
 
     msg = message.content.lower()
+    msg = re.sub(r'<:\w*:\d*>','', msg)
+
     if any(ext in msg for ext in wysiList) or any(ext in strEmb for ext in wysiList):
         rng = random.randint(0, 1000)
         if rng == 727:
