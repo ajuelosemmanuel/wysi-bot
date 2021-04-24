@@ -22,14 +22,14 @@ async def on_message(message):
         for embed in message.embeds:
             if type(embed.description) == str:
                 tmp = embed.description
-                re.sub(r'<:\w*:\d*>','', tmp)
+                tmp = re.sub(r'<:\w*:\d*>','', tmp)
                 strEmb += tmp
             for f in embed.fields:
                 tmp = f.name
-                re.sub(r'<:\w*:\d*>','', tmp)
+                tmp = re.sub(r'<:\w*:\d*>','', tmp)
                 strEmb += tmp
                 tmp = f.value
-                re.sub(r'<:\w*:\d*>','', tmp)
+                tmp = re.sub(r'<:\w*:\d*>','', tmp)
                 strEmb += tmp
 
     msg = message.content.lower()
