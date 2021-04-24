@@ -20,7 +20,8 @@ async def on_message(message):
     strEmb = ""
     if message.embeds:
         for embed in message.embeds:
-            strEmb += embed.description
+            if type(embed.description) == str:
+                strEmb += embed.description
             for f in embed.fields:
                 strEmb += f.name
                 strEmb += f.value
