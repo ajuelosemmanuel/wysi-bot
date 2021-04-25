@@ -30,7 +30,7 @@ async def on_message(message):
 
     msg = message.content.lower()
     msg = re.sub(r'<:\w*:\d*>','', msg)
-    msg = re.sub(r"<@\w*>",'', msg)
+    msg = re.sub(r"<@.\w*>",'', msg)
 
     if any(ext in msg for ext in wysiList) or any(ext in strEmb for ext in wysiList):
         rng = random.randint(0, 1000)
