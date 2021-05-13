@@ -4,7 +4,7 @@
 
 when you see it
 
-reacts when he sees the funny numeral - the only command is .roll n, n being an integer
+reacts when he sees the funny numeral - the only command is .roll n, n being an integer (base value is 1000).
 
 # add wysi to your discord server
 
