@@ -9,7 +9,7 @@ client = commands.Bot(command_prefix = '.')
 async def credits(ctx):
     em = discord.Embed(title = "Credits")
     em.set_thumbnail(url="https://raw.githubusercontent.com/ajuelosemmanuel/wysi-bot/main/media/wysiaireu.gif")
-    em.add_field(name = "Full info at", value = "https://github.com/ajuelosemmanuel/wysi-bot")
+    em.add_field(name = "Github Repo", value = "https://github.com/ajuelosemmanuel/wysi-bot")
     await ctx.send(embed = em)
 
 @client.command()
