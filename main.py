@@ -13,8 +13,8 @@ async def credits(ctx):
     await ctx.send(embed = em)
 
 @client.command()
-async def roll(ctx, integer):
-    await ctx.reply(str(random.randint(0, int(integer))), mention_author=False)
+async def roll(ctx, integer=1000):
+    await ctx.reply(str(random.randint(1, int(integer))), mention_author=False)
 
 @client.event
 async def on_ready():
