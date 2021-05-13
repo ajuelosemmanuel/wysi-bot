@@ -6,6 +6,13 @@ from discord import File
 client = commands.Bot(command_prefix = '.')
 
 @client.command()
+async def credits(ctx):
+    em = discord.Embed(title = "Credits")
+    em.set_thumbnail(url="https://raw.githubusercontent.com/ajuelosemmanuel/wysi-bot/main/media/wysiaireu.gif")
+    em.add_field(name = "Full info at", value = "https://github.com/ajuelosemmanuel/wysi-bot")
+    await ctx.send(embed = em)
+
+@client.command()
 async def roll(ctx, integer):
     await ctx.reply(str(random.randint(0, int(integer))), mention_author=False)
 
@@ -50,6 +57,5 @@ async def on_message(message):
 
     
     await client.process_commands(message)
-
 
 client.run(token)
