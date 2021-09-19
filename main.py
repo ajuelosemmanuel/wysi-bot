@@ -16,6 +16,12 @@ async def credits(ctx):
 async def roll(ctx, integer=1000):
     await ctx.reply(str(random.randint(1, int(integer))), mention_author=False)
 
+@client.command()
+async def servers(ctx):
+  
+  await ctx.send(f"Connected on {str(len(client.guilds)} servers")
+    
+    
 @client.event
 async def on_ready():
     await client.change_presence(activity=discord.Game('Wondering what comes after 726...'))
