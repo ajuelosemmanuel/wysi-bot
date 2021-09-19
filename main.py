@@ -18,8 +18,7 @@ async def roll(ctx, integer=1000):
 
 @client.command()
 async def servers(ctx):
-  
-  await ctx.send(f"Connected on {str(len(client.guilds)} servers")
+    await ctx.send(f"Connected on {str(len(client.guilds))} servers")
     
     
 @client.event
