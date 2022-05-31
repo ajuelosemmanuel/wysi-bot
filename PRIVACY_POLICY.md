@@ -8,7 +8,7 @@ Access to Data is only permitted to wysiBot in order to work properly. Data is n
 
 ## Storage of Data
 
-The Data isn't stored. The code running is available in this github repository as a "proof".
+The Data isn't stored. It is only processed so the bot can work (and detect "727" in your messages!). The code running is available in this GitHub repository as a "proof".
 
 ## User Rights
 
@@ -16,8 +16,8 @@ At any time, you have the right to request to stop the processing of your messag
 
 ## Underage Users
 
-The use of the wysiBot is not permitted for minors under the age of 13, or under the age of legal consent for their country. This is in compliance with the [Discord Terms of Service](https://discord.com/terms). No information will be knowingly stored from an underage user. If it is found out that a user is underage we will take all necessary action to delete the stored data.
+The use of the wysiBot is not permitted for minors under the age of 13, or under the age of legal consent for their country. This is in compliance with the [Discord Terms of Service](https://discord.com/terms). No information will be knowingly processed from an underage user.
 
 ## Questions
 
-If you have any questions or are concerned about what data might be being stored from your account contact `Emmanuel#9864`. For more information check the [Discord Terms Of Service](https://discord.com/terms).
+If you have any questions or concerns, contact `Emmanuel#9864`. For more information check the [Discord Terms Of Service](https://discord.com/terms).
