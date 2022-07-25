@@ -41,7 +41,7 @@ async def on_message(message):
     strEmb = re.sub(r'<:\w*:\d*>','', strEmb)
 
     msg = message.content.lower()
-    msg = re.sub(r'<:\w*:\d*>','', msg)
+    msg = re.sub(r'<a?:\w*:\d*>','', msg)
     msg = re.sub(r"<@.\w*>",'', msg)
 
     if any(ext in msg for ext in wysiList) or any(ext in strEmb for ext in wysiList):
